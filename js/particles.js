@@ -1,25 +1,18 @@
 /* ---- particles.js config ---- */
 
-// Get the color input field and button elements
-const colorInput = document.getElementById('particles-color');
-const applyButton = document.getElementById('apply-color-btn');
-
-// Get the initial color value from the input field
-let colorValue = colorInput.value;
-
-// Initialize the particles options
-let options = {
+particlesJS("particles-js", {
   "particles": {
     "number": {
       "value": 100,
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area":1000
       }
     },
     "color": {
-      "value": [colorValue]
+      "value": ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"]
     },
+    
     "shape": {
       "type": "circle",
       "stroke": {
@@ -51,7 +44,7 @@ let options = {
       "anim": {
         "enable": false,
         "speed": 40,
-        "size_min": 0.5,
+        "size_min": 0.1,
         "sync": false
       }
     },
@@ -102,20 +95,4 @@ let options = {
     }
   },
   "retina_detect": true
-};
-
-// Initialize the particles
-let particlesInstance = particlesJS("particles-js", options);
-
-// Update the particles color when the user changes the color input field
-colorInput.addEventListener('input', function() {
-  colorValue = colorInput.value;
-  options.particles.color.value = [colorValue];
-  particlesJS("particles-js", options);
-});
-
-// Update the particles color when the user clicks the apply button
-applyButton.addEventListener('click', function() {
-  options.particles.color.value = [colorValue];
-  particlesJS("particles-js", options);
 });
