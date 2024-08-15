@@ -179,7 +179,9 @@ canvas {
 }
 
 .ayimgui {
-    background-image: linear-gradient(to right, #000 0%, #000 35%, #000 35%, #000 100%);
+    background-position: center center;
+    background-size: cover;
+    background-image: url("https://files.catbox.moe/a3gjr6.jpg");
     position: relative;
     z-index: 1;
     height: 100%;
